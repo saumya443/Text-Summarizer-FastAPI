@@ -45,27 +45,26 @@ This project demonstrates a comprehensive implementation of modern NLP pipelines
 ### 1. Repository Setup
 Clone the codebase down to your machine and step into the workspace:
 ```bash
-git clone [https://github.com/saumya443/Text-Summarizer-FastAPI.git](https://github.com/saumya443/Text-Summarizer-FastAPI.git)
+git clone https://github.com/saumya443/Text-Summarizer-FastAPI.git
 cd Text-Summarizer-FastAPI
 
-### 2. Model Files Allocation
-*Note: Due to GitHub's file storage size limits (>100MB file boundaries), the actual trained weights folder is git-ignored.*
-- Locate your fine-tuned weights directory.
-- Paste it directly into the root folder and ensure it is explicitly named: **`saved_summary_model/`** (Verify that `model.safetensors`, `config.json`, and `tokenizer.json` exist within this folder).
+2. Model Files Allocation
+Note: Due to GitHub's file storage size limits (>100MB file boundaries), the actual trained weights folder is git-ignored.
 
-### 3. Dependency Provisioning
+Locate your fine-tuned weights directory.
+
+Paste it directly into the root folder and ensure it is explicitly named: saved_summary_model/ (Verify that model.safetensors, config.json, and tokenizer.json exist within this folder).
+
+3. Dependency Provisioning
 Install all necessary packages via the Python package installer:
-```bash
+
 pip install fastapi uvicorn pydantic transformers torch
 
-
-### 4. Deploy Server Process
+4. Deploy Server Process
 Fire up the asynchronous backend instance:
 
-Bash
 python -m uvicorn app:app
-Performance Note: We deliberately execute without the --reload flag in the terminal environment. This eliminates heavy multiprocessing spawn cycles, preventing Windows paging file allocations (os error 1455) and optimizing system RAM utilization during the initial large weight matrix loads.
 
-### 5. Access Web App
+5. Access Web App
 Open your web browser and navigate to:
 👉 http://127.0.0.1:8000
