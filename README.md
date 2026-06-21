@@ -42,13 +42,13 @@ This project demonstrates a comprehensive implementation of modern NLP pipelines
 
 ## 🚀 Local Installation & Execution Strategy
 
-### 1. Repository Setup
+ 1. Repository Setup
 Clone the codebase down to your machine and step into the workspace:
 ```bash
 git clone https://github.com/saumya443/Text-Summarizer-FastAPI.git
 cd Text-Summarizer-FastAPI
 
-2. Model Files Allocation
+ 2. Model Files Allocation
 Note: Due to GitHub's file storage size limits (>100MB file boundaries), the actual trained weights folder is git-ignored.
 
 Locate your fine-tuned weights directory.
